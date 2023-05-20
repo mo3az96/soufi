@@ -110,6 +110,23 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
   }
 }
 
+.nav-head {
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  display: none;
+}
+
+.close-btn {
+  color: var(--text-color);
+  font-size: 22px;
+  opacity: 0.5;
+}
+.close-btn:hover {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
 .header-list {
   display: flex;
   align-items: center;
@@ -509,6 +526,11 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
   max-width: 100%;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 767px) {
+  .product-item {
+    padding: 7.5px;
+  }
+}
 .product-item .product-img {
   position: relative;
   padding-top: 100%;
@@ -549,7 +571,7 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
 }
 @media (max-width: 767px) {
   .products-swiper .product-item {
-    margin: 0;
+    margin: 0 0 50px;
   }
 }
 
@@ -1288,8 +1310,75 @@ html[dir=ltr] .footer-list a:hover {
   }
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.9;
+  z-index: 998;
+  display: none;
+}
+
 @media (max-width: 767px) {
   .header-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    inset-inline-start: -300px;
+    width: 300px;
+    background-color: #fff;
+    z-index: 999;
+    padding: 0 0 80px;
+    transition: all 0.3s ease-in-out;
+  }
+  .header-nav.active {
+    inset-inline-start: 0;
+  }
+  .nav-head {
+    display: flex;
+  }
+  .nav-head .logo {
+    width: 75px;
+  }
+  .header-list {
+    display: block;
+    padding: 0 15px;
+  }
+  .list-item {
+    margin: 10px 0;
+  }
+  .list-link.active::before {
     display: none;
+  }
+  .sub-list {
+    position: relative;
+    transform: none;
+    inset: unset;
+    transition: none;
+    visibility: visible;
+    opacity: 1;
+    box-shadow: none;
+    padding: 0 15px;
+    display: none;
+  }
+  .sub-list a {
+    justify-content: flex-start;
+    border: none;
+    padding: 0;
+  }
+  .has_sub .list-link {
+    line-height: inherit;
+  }
+  .has_sub .list-link::after {
+    transition: all 0.3s ease-in-out;
+  }
+  .has_sub .list-link.active {
+    color: var(--primary-color);
+  }
+  .has_sub .list-link.active::after {
+    transform: rotate(180deg);
   }
 }/*# sourceMappingURL=main.css.map */

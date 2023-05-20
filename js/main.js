@@ -81,12 +81,39 @@ $(document).ready(function () {
       },
     },
   });
-
+  /************************************ imgs Slider ************************************/
   var owl = $(".imgs-slider");
   owl.owlCarousel({
     loop: true,
-    center:true,
+    center: true,
     rtl: document.dir == "rtl" ? true : false,
     items: 1,
   });
+  /************************************ navbar ************************************/
+
+  if ($(window).width() <= 768) {
+    $(".menu-btn").click(function (e) {
+      $(".overlay").fadeIn(500);
+      $(".header-nav").addClass("active");
+      $("body").addClass("overflow");
+    });
+    $(".close-btn,.overlay").click(function (e) {
+      $(".overlay").fadeOut(500);
+      $(".header-nav").removeClass("active");
+      $("body").removeClass("overflow");
+    });
+
+    $(".has_sub .list-link").click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(".has_sub .list-link").not(this).removeClass("active");
+      $(this).toggleClass("active");
+      if ($(this).siblings().css("display") == "none") {
+        $(this).siblings().slideDown(500);
+      } else {
+        $(this).siblings().slideUp(500);
+      }
+      $(".has_sub .list-link").not(this).siblings().slideUp(500);
+    });
+  }
 });
