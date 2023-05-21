@@ -393,7 +393,8 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
 .main-btns {
   display: flex;
   align-items: center;
-  margin: 0 0 45px;
+  padding: 0 0 45px;
+  border-bottom: 4px solid #fff;
 }
 @media (max-width: 991px) {
   .main-btns {
@@ -402,7 +403,7 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
 }
 @media (max-width: 767px) {
   .main-btns {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -461,7 +462,6 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 15px;
-  border-top: 4px solid #fff;
   padding: 0 30px;
   padding-top: 34px;
 }
@@ -474,6 +474,9 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
   .main-feats {
     grid-template-columns: 1fr;
     gap: 30px;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: auto;
   }
 }
 
@@ -483,22 +486,24 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
   width: -moz-max-content;
   width: max-content;
 }
-@media (max-width: 991px) {
-  .main-feat {
-    margin: auto;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
 .main-feat .feat-icon {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  font-size: 45px;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--secondery-color);
   transition: background-color 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .main-feat .feat-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+  }
 }
 .main-feat .feat-tite {
   color: #fff;
@@ -510,7 +515,6 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
 @media (max-width: 991px) {
   .main-feat .feat-tite {
     font-size: 18px;
-    margin: 10px 0 0;
   }
 }
 .main-feat:hover .feat-icon {
@@ -1148,6 +1152,139 @@ header {
   transform: translateY(-10px);
   background-color: var(--primary-color);
   box-shadow: 0px 1px 4.7px 0.3px rgba(0, 0, 0, 0.25);
+}
+
+.about-content {
+  padding-bottom: 80px;
+}
+@media (max-width: 991px) {
+  .about-content {
+    padding-bottom: 40px;
+  }
+}
+
+.about-main-div img {
+  width: 100%;
+  height: auto;
+}
+
+.about-feats-sec {
+  transform: translateY(-61px);
+}
+.about-feats-sec .about-feat-cont {
+  background-color: var(--secondery-color);
+  border-radius: var(--border-radius);
+  padding: 21px 0;
+}
+@media (max-width: 991px) {
+  .about-feats-sec .about-feat-cont {
+    padding: 20px 0;
+  }
+}
+.about-feats-sec .main-feats {
+  padding-top: 0;
+}
+.about-feats-sec .main-feat .feat-icon {
+  font-size: 43px;
+}
+@media (max-width: 767px) {
+  .about-feats-sec .main-feat .feat-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+  }
+}
+.about-feats-sec .main-feat .feat-tite {
+  font-size: 29px;
+}
+@media (max-width: 991px) {
+  .about-feats-sec .main-feat .feat-tite {
+    font-size: 18px;
+  }
+}
+
+.about-block {
+  border: 3px solid var(--secondery-color);
+  border-radius: var(--border-radius);
+  padding: 0 70px 0;
+  margin-top: 63px;
+}
+@media (max-width: 991px) {
+  .about-block {
+    padding: 0 15px 0;
+  }
+}
+
+.block-title {
+  background-color: #ecf1f5;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin: 0 9px 20px;
+  transform: translateY(-50%);
+}
+.block-title i {
+  font-size: 60px;
+  -webkit-margin-end: 15px;
+          margin-inline-end: 15px;
+}
+@media (max-width: 991px) {
+  .block-title {
+    font-size: 32px;
+  }
+  .block-title i {
+    font-size: 40px;
+  }
+}
+
+.block-body h3 {
+  font-size: 33px;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+@media (max-width: 991px) {
+  .block-body h3 {
+    font-size: 24px;
+  }
+}
+.block-body p {
+  font-size: 25px;
+  color: var(--text-color);
+  margin-bottom: 65px;
+}
+@media (max-width: 991px) {
+  .block-body p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+.block-body ul {
+  margin: 0;
+  padding: 0;
+}
+.block-body li {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 -24px;
+}
+@media (max-width: 991px) {
+  .block-body li {
+    margin: 0;
+  }
+}
+.block-body li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0d9";
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-top: 5px;
+  width: 24px;
+  flex-shrink: 0;
 }
 
 footer {
