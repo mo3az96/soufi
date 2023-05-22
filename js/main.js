@@ -90,7 +90,6 @@ $(document).ready(function () {
     items: 1,
   });
   /************************************ navbar ************************************/
-
   if ($(window).width() <= 768) {
     $(".menu-btn").click(function (e) {
       $(".overlay").fadeIn(500);
@@ -116,4 +115,21 @@ $(document).ready(function () {
       $(".has_sub .list-link").not(this).siblings().slideUp(500);
     });
   }
+  /************************************ product Slider ************************************/
+  var productSwiper = new Swiper(".product-imgs-swiper .swiper", {
+    loop: true,
+    a11y: {
+      enabled: false,
+    },
+    pagination: {
+      el: ".product-imgs-swiper .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".product-imgs-swiper .swiper-button-next",
+      prevEl: ".product-imgs-swiper .swiper-button-prev",
+    },
+    slidesPerView: 1,
+    spaceBetween: 15,
+  });
 });
