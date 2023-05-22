@@ -1507,6 +1507,11 @@ header {
   -webkit-border-end: none;
           border-inline-end: none;
 }
+@media (max-width: 991px) {
+  .costum-tabs button {
+    font-size: 24px;
+  }
+}
 .costum-tabs button.active {
   border-bottom-color: #ecf1f5;
   background-color: #ecf1f5;
