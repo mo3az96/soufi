@@ -1867,6 +1867,214 @@ header {
   }
 }
 
+.branches-cover {
+  position: relative;
+  height: 330px;
+}
+@media (max-width: 991px) {
+  .branches-cover {
+    height: 160px;
+  }
+}
+.branches-cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.branches-cover:after, .branches-cover::before {
+  position: absolute;
+  opacity: 0.502;
+  inset: 0;
+  content: "";
+  display: block;
+}
+.branches-cover:after {
+  background-color: rgb(124, 159, 184);
+  z-index: 1;
+}
+.branches-cover::before {
+  background-color: rgb(0, 0, 0);
+  z-index: 2;
+}
+.branches-cover .branches-head {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 0 15px 45px;
+}
+.branches-cover .branches-title {
+  font-size: 58px;
+  font-weight: 800;
+  margin: 0 0 65px;
+}
+@media (max-width: 991px) {
+  .branches-cover .branches-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+}
+.branches-cover .branches-subtitle {
+  font-size: 42px;
+  font-weight: 400;
+  margin: 0;
+}
+@media (max-width: 991px) {
+  .branches-cover .branches-subtitle {
+    font-size: 22px;
+  }
+}
+
+.branches-page {
+  padding: 20px 0 130px;
+}
+@media (max-width: 991px) {
+  .branches-page {
+    padding: 20px 0 50px;
+  }
+}
+
+.branch-block {
+  border: 3px solid var(--secondery-color);
+  border-radius: var(--border-radius);
+  padding: 0 67px 50px;
+  -webkit-padding-end: 20px;
+          padding-inline-end: 20px;
+  margin-top: 70px;
+}
+@media (max-width: 991px) {
+  .branch-block {
+    padding: 0 15px 20px;
+    margin-top: 50px;
+  }
+}
+.branch-block .branch-title {
+  background-color: #ecf1f5;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 30px;
+  transform: translateY(-50%);
+}
+@media (max-width: 991px) {
+  .branch-block .branch-title {
+    font-size: 24px;
+  }
+}
+.branch-block .branch-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+@media (max-width: 991px) {
+  .branch-block .branch-body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.branch-block .branch-contacts .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 27px;
+}
+.branch-block .branch-contacts .item:last-of-type {
+  margin-bottom: 0;
+}
+.branch-block .branch-contacts .item i {
+  width: 55px;
+  font-size: 30px;
+  display: flex;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+@media (max-width: 991px) {
+  .branch-block .branch-contacts .item i {
+    font-size: 26px;
+    width: 40px;
+  }
+}
+.branch-block .branch-contacts .text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.branch-block .branch-contacts .value {
+  font-size: 25px;
+  color: var(--text-color);
+  direction: ltr;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+html[dir=rtl] .branch-block .branch-contacts .value {
+  text-align: right;
+}
+html[dir=ltr] .branch-block .branch-contacts .value {
+  text-align: left;
+}
+@media (max-width: 991px) {
+  .branch-block .branch-contacts .value {
+    font-size: 18px;
+  }
+}
+.branch-block .branch-contacts a.value:hover {
+  color: var(--primary-color);
+}
+
+.branch-map {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 30px 25px 13px;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .branch-map {
+    padding: 15px;
+  }
+}
+.branch-map iframe {
+  height: 300px;
+}
+.branch-map .dir-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.branch-map .dir-link i {
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+  color: var(--primary-color);
+  font-size: 25px;
+}
+@media (max-width: 991px) {
+  .branch-map .dir-link i {
+    font-size: 22px;
+  }
+}
+@media (max-width: 991px) {
+  .branch-map .dir-link {
+    font-size: 18px;
+  }
+}
+.branch-map .dir-link:hover {
+  color: var(--primary-color);
+}
+
 footer {
   background-color: #383c3e;
 }
