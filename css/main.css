@@ -2184,6 +2184,222 @@ html[dir=ltr] .branch-block .branch-contacts .value {
   box-shadow: 0px 15px 40px 0px rgba(40, 56, 69, 0.25);
 }
 
+.contact-main {
+  position: relative;
+}
+.contact-main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+.contact-main:after, .contact-main::before {
+  position: absolute;
+  opacity: 0.702;
+  inset: 0;
+  content: "";
+  display: block;
+}
+.contact-main:after {
+  background-color: rgb(100, 158, 229);
+  z-index: 2;
+}
+.contact-main::before {
+  background-color: rgb(0, 0, 0);
+  z-index: 3;
+}
+.contact-main .contact-main-text {
+  padding: 200px 15px;
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .contact-main .contact-main-text {
+    padding: 50px 15px 35px;
+  }
+}
+.contact-main .contact-title {
+  font-size: 90px;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+@media (max-width: 991px) {
+  .contact-main .contact-title {
+    text-align: center;
+    font-size: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-main .contact-title {
+    font-size: 36px;
+    margin-bottom: 18px;
+  }
+}
+.contact-main .contact-subtitle {
+  font-size: 47px;
+  font-weight: 500;
+  margin: 0;
+}
+@media (max-width: 991px) {
+  .contact-main .contact-subtitle {
+    text-align: center;
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-main .contact-subtitle {
+    font-size: 24px;
+  }
+}
+.contact-main .contact-main-methods {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 230px;
+}
+@media (max-width: 991px) {
+  .contact-main .contact-main-methods {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+}
+.contact-main .contact-method {
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .contact-main .contact-method {
+    margin: 15px auto;
+  }
+}
+.contact-main .contact-method .method-icon {
+  font-size: 40px;
+}
+@media (max-width: 991px) {
+  .contact-main .contact-method .method-icon {
+    font-size: 24px;
+  }
+}
+.contact-main .contact-method .method-title {
+  font-size: 50px;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+@media (max-width: 991px) {
+  .contact-main .contact-method .method-title {
+    font-size: 28px;
+  }
+}
+.contact-main .contact-method .method-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 33px;
+  color: #e0e0e0;
+  width: 360px;
+}
+@media (max-width: 991px) {
+  .contact-main .contact-method .method-value {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+.contact-main .contact-method .method-value a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.contact-main .contact-method .method-value a:hover {
+  color: var(--primary-color);
+}
+
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 60px 0 180px;
+}
+@media (max-width: 991px) {
+  .contact-page-grid {
+    grid-template-columns: 1fr;
+    padding: 40px 0 70px;
+  }
+}
+.contact-page-grid .contact-form {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  background-color: #fdfdfd;
+  border-radius: 5px;
+  padding: 55px 40px 50px;
+}
+@media (max-width: 1199px) {
+  .contact-page-grid .contact-form {
+    width: 572px;
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .contact-page-grid .contact-form {
+    width: 100%;
+    padding: 25px 15px;
+  }
+}
+
+.contact-map {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 30px 25px 10px;
+  text-align: center;
+  margin-top: 55px;
+}
+@media (max-width: 991px) {
+  .contact-map {
+    padding: 15px;
+    margin: 0;
+  }
+}
+.contact-map iframe {
+  height: 416px;
+}
+.contact-map .dir-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.contact-map .dir-link i {
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+  color: var(--primary-color);
+  font-size: 25px;
+}
+@media (max-width: 991px) {
+  .contact-map .dir-link i {
+    font-size: 22px;
+  }
+}
+@media (max-width: 991px) {
+  .contact-map .dir-link {
+    font-size: 18px;
+  }
+}
+.contact-map .dir-link:hover {
+  color: var(--primary-color);
+}
+
 footer {
   background-color: #383c3e;
 }
