@@ -359,6 +359,8 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
   color: var(--text-color);
   border: none;
   padding: 0;
+  display: flex;
+  align-items: center;
   background-color: transparent;
   transition: color 0.3s ease-in-out;
 }
