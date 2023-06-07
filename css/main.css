@@ -1365,9 +1365,10 @@ header {
     font-size: 40px;
   }
   .block-title .num {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     font-size: 20px;
+    padding-top: 6px;
   }
 }
 
@@ -1623,6 +1624,7 @@ header {
 .exhibition-imgs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 35px 60px;
 }
 @media (max-width: 1199px) {
   .exhibition-imgs-grid {
@@ -2602,6 +2604,9 @@ html[dir=ltr] .footer-list a:hover {
   }
   .list-item {
     margin: 10px 0;
+  }
+  .list-link::before {
+    display: none !important;
   }
   .list-link.active::before {
     display: none;
